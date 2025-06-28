@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  test('Suma básica', () {
+  test('Suma basica', () {
     expect(2 + 3, 5);
   });
 
