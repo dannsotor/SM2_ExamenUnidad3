@@ -1,32 +1,62 @@
-# Proyecto Móvil - TrendyCart
 
-**Curso:** Soluciones Móviles II  
-**Docente:** Dr. Oscar Juan Jimenez Flores  
+#  EXAMEN PRÁCTICO – UNIDAD III
 
-**Integrantes:**
-- Salinas Condori, Erick Javier – 2020069046  
-- Zevallos Purca, Justin Zinedine – 2020066924  
-- Mayner Gonzalo Anahua Coaquira – 2020067145  
-- Escobar Rejas, Carlos Andrés – 2021070016  
-- Huallpa Maron, Jesus – 2021071085  
-- Soto Rodriguez, Duanet – 2015051384  
+**Curso:** Desarrollo de Aplicaciones Móviles  
+**Tema:** Automatización de calidad con GitHub Actions  
+**Alumno:** Soto Rodriguez Duanet  
+**Entrega:** Readme.md convertido en PDF con evidencia y documentación  
 
 ---
 
-# Historias de Usuario
+## Objetivo
 
-| ID | Título                              | User Story                                                                                         | Criterios de Aceptación |
-|----|-------------------------------------|-----------------------------------------------------------------------------------------------------|--------------------------|
-| 1  | Inicio Sesión                       | Como usuario, quiero iniciar sesión para acceder al sistema.                                       | **CA01:** Inicio exitoso<br>**CA02:** Credenciales incorrectas |
-| 2  | Registro de Usuario                 | Como cliente y vendedor, quiero registrarme ingresando mis datos personales para usar la plataforma.| **CA01:** Registro exitoso<br>**CA02:** Correo único |
-| 3  | Visualización de Catálogos         | Como cliente, quiero explorar un catálogo con imágenes, precios y calificaciones.                 | **CA01:** Visualización<br>**CA02:** Ordenar por calificación o precio |
-| 4  | Publicación de comentarios          | Como cliente, quiero publicar comentarios para ayudar a otros.                                    | **CA01:** Publicación exitosa<br>**CA02:** Visualización de comentarios |
-| 5  | Buscar productos por categoría      | Como cliente, quiero filtrar productos por categorías.                                             | **CA01:** Filtrado por tipo de producto |
-| 6  | Interacción con chatbot             | Como cliente, quiero resolver dudas mediante un chatbot interactivo.                              | **CA01:** Inicio de la interacción |
-| 7  | Pagos seguros                       | Como cliente, quiero pagar en línea de forma segura.                                               | **CA01:** Selección de método de pago |
-| 8  | Gestión de usuarios (admin)         | Como administrador, quiero gestionar cuentas de usuarios.                                          | **CA01:** Creación de usuario<br>**CA02:** Desactivación de usuario |
-| 9  | Gestión de productos (admin)        | Como administrador, quiero gestionar el inventario de productos.                                   | **CA01:** Agregar nuevo producto |
-| 10 | Actualización del carrito           | Como cliente, quiero que el carrito se actualice automáticamente.                                 | **CA01:** Agregar producto al carrito |
-| 11 | Recuperación de contraseña          | Como usuario, quiero recuperar mi contraseña olvidada.                                             | **CA01:** Solicitud de recuperación<br>**CA02:** Restablecimiento exitoso |
-| 12 | Agregar productos a favoritos       | Como cliente, quiero agregar productos a una lista de deseos.                                     | **CA01:** Agregar a favoritos<br>**CA02:** Visualización de favoritos |
+Implementar un flujo de trabajo (workflow) automatizado en **GitHub Actions** para realizar análisis de calidad sobre un proyecto móvil, integrando prácticas de **DevOps**.
+
+---
+
+##  Actividades Realizadas
+
+### 1.  Crear repositorio en GitHub
+
+Se creó un repositorio **público** con el nombre exacto:  
+ `SM2_ExamenUnidad3`
+ 
+![image](https://github.com/user-attachments/assets/a305f819-766c-4bcb-85b9-c3564f04efa6)
+
+### 2.  Copiar proyecto móvil al nuevo repositorio
+
+Copiamos todo de Nuestro Proyecto 
+![image](https://github.com/user-attachments/assets/67f53a0e-39f1-4bc7-81be-5a03df1086b1)
+Y lo pegamos en SM2_ExamenUnidad3
+![image](https://github.com/user-attachments/assets/f78ca99c-e4ab-4753-b9ef-0d3359328b92)
+
+Todo el contenido del proyecto móvil desarrollado durante el curso fue copiado manualmente dentro del repositorio **SM2_ExamenUnidad3**.
+
+3.	Crear el workflow de GitHub Actions
+Dentro de tu proyecto (la raíz), crea las siguientes carpetas en la raíz del repositorio:
+.github/workflows/
+test/
+
+Dentro de workflows, crea un archivo llamado: quality-check.yml
+![image](https://github.com/user-attachments/assets/4d8fd999-a8a0-4817-b330-067eac5ddb64)
+
+Dentro de test, crea un archivo llamado: main_test.dart  
+![image](https://github.com/user-attachments/assets/20349007-1456-40a7-a8df-b1ae55a8e41c)
+4.	Agregar un workflow básico
+El archivo main_test.dart, debe contener al menos 3 prueba unitarias.
+EL archivo main test dart contiene 3 pruebas unitarias  
+![image](https://github.com/user-attachments/assets/243b3174-5c56-478b-b950-d7f5ac43016f)
+
+##En el archivo quality-check.yml, escribe un flujo de trabajo que se ejecute automáticamente cuando se haga un commit o un pull request.
+![image](https://github.com/user-attachments/assets/1c54beb2-fad8-4518-a53f-f2a5020202ba)
+
+### 35.	Verificar ejecución automática
+Una vez subido el archivo al repositorio, realiza un commit o pull request.
+Luego, verifica que el workflow se haya ejecutado automáticamente desde la pestaña Actions en GitHub.
+Al hacer git push al repositorio en la rama main o al crear un pull request hacia main. GitHub ejecutará automáticamente: flutter analyze sobre todo el proyecto y  flutter test sobre todo el contenido de la carpeta test/
+
+![image](https://github.com/user-attachments/assets/0e870dfc-bb26-4575-852e-b20883bbcc33)
+
+
+
 
