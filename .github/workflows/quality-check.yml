@@ -18,8 +18,10 @@ jobs:
           git clone https://github.com/flutter/flutter.git --branch main --depth 1
           echo "$GITHUB_WORKSPACE/flutter/bin" >> $GITHUB_PATH
 
-      - name: Run flutter doctor
-        run: flutter doctor
+      - name: Run flutter doctor safely
+        run: |
+          git symbolic-ref HEAD refs/heads/main || true
+          flutter doctor
 
       - name: Install dependencies
         run: flutter pub get
@@ -29,4 +31,3 @@ jobs:
 
       - name: Run tests
         run: flutter test
-
