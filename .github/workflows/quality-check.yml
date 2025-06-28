@@ -13,16 +13,17 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Install Flutter manually (3.32.5 - Dart 3.7.2)
+      # Instala Flutter 3.32.5 (Dart 3.7.2) directamente desde el canal main
+      - name: Install Flutter (3.32.5 – Dart 3.7.2)
         run: |
           git clone https://github.com/flutter/flutter.git --branch main --depth 1
           echo "$GITHUB_WORKSPACE/flutter/bin" >> $GITHUB_PATH
 
-      - name: Install dependencies
-        run: flutter pub get
-
+      # Análisis estático
       - name: Analyze
         run: flutter analyze
 
+      # Pruebas unitarias
       - name: Run tests
         run: flutter test
+
