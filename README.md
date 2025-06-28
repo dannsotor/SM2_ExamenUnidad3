@@ -16,7 +16,7 @@ Implementar un flujo de trabajo (workflow) automatizado en **GitHub Actions** pa
 
 ##  Actividades Realizadas
 
-### 1.  Crear repositorio en GitHub
+### 1.  Crear repositorio en GitHubb
 
 Se creó un repositorio **público** con el nombre exacto:  
  `SM2_ExamenUnidad3`
